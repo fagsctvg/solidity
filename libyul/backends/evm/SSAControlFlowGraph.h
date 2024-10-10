@@ -208,6 +208,7 @@ public:
 		return it->second;
 	}
 	ValueId lookupLiteral(yul::LiteralValue const& _literalValue) const;
+	size_t numValueIds() const { return m_valueInfos.size(); }
 	std::optional<ValueId> zeroLiteral() const;
 
 	std::string toDot(bool _includeDiGraphDefinition=true, std::optional<size_t> _functionIndex=std::nullopt) const;
